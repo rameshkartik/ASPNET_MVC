@@ -1,0 +1,27 @@
+﻿@model ViewModelSample.Models.EmployeeVM
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Show</h2>
+<h3>EmployeeCode :- @Model.empObj.EmployeeCode</h3>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee Details</title>
+</head>
+<body>
+    <div>
+        EmployeeCode :- @Model.empObj.EmployeeCode <br />
+        EmployeeName :- @Model.empObj.EmployeeName <br />
+        Location :- @Model.empObj.Location <br />
+        Age :- @Model.empObj.Age <br />
+        BalanceLevel :-@Model.GetLowPFBalanceEmp() <br />
+        PFNumber :-@Model.empObj.PFObj.PF_Number <br />
+        PFBal :-@Model.empObj.PFObj.PF_Balance <br />
+
+        
+    </div>
+</body>
+</html>
+

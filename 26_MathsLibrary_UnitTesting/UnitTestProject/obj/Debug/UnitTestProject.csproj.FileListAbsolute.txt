@@ -1,0 +1,14 @@
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\MathsLibrary_UnitTesting\UnitTestProject\bin\Debug\UnitTestProject.dll
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\MathsLibrary_UnitTesting\UnitTestProject\bin\Debug\UnitTestProject.pdb
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\MathsLibrary_UnitTesting\UnitTestProject\bin\Debug\MathsLibrary_UnitTesting.dll
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\MathsLibrary_UnitTesting\UnitTestProject\bin\Debug\MathsLibrary_UnitTesting.pdb
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\MathsLibrary_UnitTesting\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\MathsLibrary_UnitTesting\UnitTestProject\obj\Debug\UnitTestProject.dll
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\MathsLibrary_UnitTesting\UnitTestProject\obj\Debug\UnitTestProject.pdb
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\26_MathsLibrary_UnitTesting\UnitTestProject\bin\Debug\UnitTestProject.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\26_MathsLibrary_UnitTesting\UnitTestProject\bin\Debug\UnitTestProject.pdb
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\26_MathsLibrary_UnitTesting\UnitTestProject\bin\Debug\MathsLibrary_UnitTesting.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\26_MathsLibrary_UnitTesting\UnitTestProject\bin\Debug\MathsLibrary_UnitTesting.pdb
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\26_MathsLibrary_UnitTesting\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\26_MathsLibrary_UnitTesting\UnitTestProject\obj\Debug\UnitTestProject.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\26_MathsLibrary_UnitTesting\UnitTestProject\obj\Debug\UnitTestProject.pdb

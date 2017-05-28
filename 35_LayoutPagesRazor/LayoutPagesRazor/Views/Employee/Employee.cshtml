@@ -1,0 +1,22 @@
+﻿@using LayoutPagesRazor.ViewModel
+@model EmployeeVM
+@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+@section BodySection
+{
+<div>
+     Employee Code :-@Model.EmpObj.EmployeeCode
+     Employee Name :-@Model.EmpObj.EmployeeName
+     Employee Salary :-@Model.EmpObj.EmployeeSalary
+</div>
+}
+
+@section OptionName {
+    <b>Employee</b>
+}
+
+@section HeaderSection{
+    <b>Customer Application</b>
+}

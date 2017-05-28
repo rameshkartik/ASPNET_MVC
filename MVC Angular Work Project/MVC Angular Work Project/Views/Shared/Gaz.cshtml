@@ -1,0 +1,133 @@
+﻿@using MVC_Project_1.Models;
+@model MVC_Project_1.Models.GazRequestVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/angular.js"></script>
+
+
+<script language="Javascript">
+
+    function GazViewModel($scope,$http)
+    {
+        $scope.GazObj = {
+
+            RequestNo: "1234",
+            OldName: "Ramesh",
+            NewName: "Kartik",
+            DOB: "06Aug",
+            City: "Chennai"
+        };
+    
+
+        $scope.Add = function () {
+            $http({ method: "POST", data: $scope.GazObj, url: "/Api/Gaz" }).then(function successCallBack(response) {
+                alert("Success");
+                $scope.GazRequests = response.data;
+                $scope.GazObj = {
+                    RequestNo: "",
+                    OldName: "",
+                    NewName: "",
+                    DOB: "",
+                    City: ""
+                };
+                debugger;
+            }, function FailureCallBack(response) {
+                debugger;
+                alert("Failed");
+            });
+        }
+
+        $scope.Load = function () {
+            $http({ method: "GET", url: "/Api/Gaz" }).then(function SuccessCallBack(response) {
+                $scope.GazRequests = response.data;
+            }, function FailCallBack(response) {
+                alert("Failed");
+            });
+        }
+
+        $scope.Load();
+
+    }
+
+    var myApp = angular.module("myApp", []);
+    myApp.controller("GazViewModel", GazViewModel);
+
+
+    function Add() {
+        alert("add");
+
+
+    }
+    //function GetData()
+    //{
+    //    alert("GetReq");
+    //    $.get("GetReq", null, RecvData);
+    //}
+
+
+    function RecvData(Requests) {
+        alert("hi");
+        var TblRef = $("#tbl");
+        $("#tbl tr").remove();
+
+        for (var i = 0; i < Requests.length; i++) {
+            var newrow = "<tr>" +
+                "<td>" + Requests[i].RequestNo + "<td>" +
+            "<td>" + Requests[i].OldName + "<td>" +
+            "<td>" + Requests[i].NewName + "<td>" +
+            "<td>" + Requests[i].DOB + "<td>" +
+            "<td>" + Requests[i].City + "<td>" +
+            "</tr>";
+            TblRef.append(newrow);
+        }
+    }
+</script>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customer</title>
+</head>
+
+
+<body ng-app="myApp">
+    <div>
+        <b><u>Welcome to Gazette Office</u></b> <br /> <br />
+    </div>
+    <div ng-controller="GazViewModel">
+        <form id="frm" style="background-color:aqua">
+            <br /><br />
+            NameChange Request No  :- <input id="ReqNo" name="RequestNo" type="text" ng-model="GazObj.RequestNo" /> <br /> <br />
+            Old Name               :- <input id="Oldnam" name="OldName" type="text" ng-model="GazObj.OldName" /> <br /><br />
+            New Name               :- <input id="NewNam" name="NewName" type="text" ng-model="GazObj.NewName" /><br /><br />
+            Date Of Birth          :- <input id="DateofBirth" name="DOB" type="text" ng-model="GazObj.DOB" /><br /><br />
+            City                   :- <input id="City" name="City" type="text" ng-model="GazObj.City" /><br /><br />
+        </form>
+        <input id="btn" name="SubmitBtn" value="Submit Request" type="button" ng-click="Add()" /> <br /> <br />
+        <table id="tbl">
+            <tr>
+                <td>RequestNo</td>
+                <td>OldName</td>
+                <td>NewName</td>
+                <td>DOB</td>
+                <td>City</td>
+            </tr>
+            <tr ng-repeat="gaz in GazRequests">
+                <td>{{gaz.RequestNo}}</td>
+                <td>{{gaz.OldName}}</td>
+                <td>{{gaz.NewName}}</td>
+                <td>{{gaz.DOB}}</td>
+                <td>{{gaz.City}}</td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿@model WebGridSample.ViewModel.GridVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+
+        .Grid 
+         {
+            border-collapse:collapse;
+        }
+        .GridHeader th {
+            background-color: azure;
+            border: medium;
+        }
+
+        .Grid td {
+            background-color:lightblue;
+            border:1px solid black;
+            padding: 4px;
+        }
+
+        .AltRow td {
+            background-color:lightcoral;
+        }
+
+        .FooterFormat td {
+            background-color:lightgreen;
+        }
+    </style>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script>
+        function EditEmployee(EmployeeName) {
+            alert(EmployeeName);
+            $.get("EditEmployee", "EmployeeName=" + EmployeeName).done(function (res) {
+                alert(res);
+            });
+        }
+    </script>
+</head>
+<body>
+    @{
+        var wGrid = new WebGrid(Model.Employees, canPage: true, canSort: true, rowsPerPage: 10,ajaxUpdateContainerId:"DivGrid");
+        wGrid.Pager(WebGridPagerModes.NextPrevious);
+    }
+    <div id="DivGrid">
+
+        @wGrid.GetHtml(tableStyle: "Grid", headerStyle: "GridHeader", alternatingRowStyle: "AltRow",
+    footerStyle: "FooterFormat", columns: wGrid.Columns
+    (
+        wGrid.Column("EmployeeCode", "Employee Code"),
+        wGrid.Column("EmployeeName", "Employee Name", format: @<text>@item.EmployeeName (@item.Age )</text>),
+        wGrid.Column("Age","Age"),
+        wGrid.Column(format:@<text><a href="#" onclick="EditEmployee('@item.EmployeeName')">Edit</a></text>)
+        )
+        )
+
+    </div>
+    <div> 
+    </div>
+</body>
+</html>

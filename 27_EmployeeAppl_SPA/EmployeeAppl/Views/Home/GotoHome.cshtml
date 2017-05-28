@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee Application</title>
+</head>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+<script src="~/Scripts/Employee.js"></script>
+<body ng-app="myApp">
+    <div> 
+        Employee Application <br />
+    </div>
+
+    <div>
+        <a href="#/Enter">Add New Employee</a> <br />
+        <a href="#/Search">Search Employees</a> <br />
+    </div>
+    <script language="javascript">
+
+        var app = angular.module("myApp", ['ngRoute']);
+        app.controller('EmployeeViewModel', EmployeeViewModel);
+        app.config(['$routeProvider',
+            function ($routeProvider) {;
+                $routeProvider.
+                    when('/Enter', {
+                        templateUrl: '/EmployeeUI/New',
+                        controller: 'EmployeeViewModel'
+                    }).
+                     when('/Search', {
+                         templateUrl: 'EmployeeUI/Search',
+                         controller: 'EmployeeViewModel'
+                     }).
+                     otherwise({
+                         redirectTo: '/'
+                     });
+             
+            }]);
+    </script>
+    <div ng-view>
+    </div>
+</body>
+</html>

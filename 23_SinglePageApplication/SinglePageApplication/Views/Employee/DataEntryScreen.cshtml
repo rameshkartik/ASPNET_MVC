@@ -1,0 +1,31 @@
+﻿@{
+    AjaxOptions o = new AjaxOptions();
+    o.OnSuccess = "OnSaveSuccess";
+}
+
+@using(Ajax.BeginForm("SaveEmployee","Employee",o))
+{ 
+    <table>
+        <tr>
+            <td>EmployeeName:</td>
+            <td><input type="text" name="EmployeeName" value=""></td>
+        </tr>
+
+        <tr>
+            <td>EmployeeCode:</td>
+            <td><input type="text" name="EmployeeCode" value=""></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input type="text" name="Age" value=""></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="right">
+                <input type="submit" name="name" value="Save" />
+                <input type="Reset" name="name" value="Reset" />
+                <input type="button" name="name" value="Cancel" onclick="CancelSave();" />
+            </td>
+        </tr>
+
+    </table>
+}

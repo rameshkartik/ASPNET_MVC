@@ -1,0 +1,33 @@
+﻿@model AsyncCtrller.Models.DashboardVM
+
+@{
+    //ViewBag.Title = "Dashboard";    
+}
+
+
+<html>
+<head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Dashboard</title>
+
+</head>
+<body>
+    <div>
+        Execution time :- @ViewData["Time"]
+        Start Thread :- @ViewData["ThreadId1"]
+        End Thread :- @ViewData["ThreadId2"]
+        <table border="1" cellspacing="0" cellpadding="0" width="300px" height="200px">
+            <tr>
+                <td>@Model.EmloyeeName</td>
+                <td>@Model.EmployeeCode</td>
+            </tr>
+            <tr>
+                <td>@Model.Location</td>
+                <td>@Model.Salary</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<h2>Dashboard</h2>
+

@@ -1,0 +1,29 @@
+﻿@using LayoutPagesRazor.ViewModel
+@model LayoutVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>My App</title>
+    @RenderSection("HeaderSection",false)
+</head>
+<body>
+    <h1>Welcome to WebSite</h1>
+    <h2>@Model.CompanyName</h2>
+    <hr />
+    <div style="text-decoration:underline">
+        Option:@RenderSection("OptionName")
+    </div><br />
+    <div id="Divmenus" style="background-color:silver;border:1px solid black;padding:6px">
+        <a href="/Employee/Index">Employee</a>
+        <a href="/Customer/Index">Customer</a>
+    </div><br />
+    @RenderSection("BodySection")
+    @*@RenderBody()*@
+</body>
+</html>

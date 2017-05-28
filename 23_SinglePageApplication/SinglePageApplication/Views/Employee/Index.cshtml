@@ -1,0 +1,67 @@
+﻿@using SinglePageApplication.ViewModel
+@using SinglePageApplication.Models
+@model EmployeeVM
+
+           
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script>
+        function AddEmployee()
+        {
+            $.get("DataEntryScreen").done(function (r) {
+                $('#DivDataEntry').html(r);
+            });
+        }
+
+        function OnSaveSuccess(r)
+        {
+            var table = $('#tbl');
+            var NameTd = $('<td>').text(r.EmployeeName);
+            var CodeTd = $('<td>').text(r.EmployeeCode);
+            var AgeTd = $('<td>').text(r.Age);
+            
+            var Tr = $('<tr>').append(NameTd).append(CodeTd).append(AgeTd);
+
+            table.append(Tr);
+            $('#DivDataEntry').html("");
+
+        }
+
+        function CancelSave()
+        {
+            $('#DivDataEntry').html("");
+        }
+    </script>
+</head>
+<body>
+    <div> 
+        <input type="button" value="Add New" name="BtnAddNew" onclick="AddEmployee()" />
+        <table border="1" id="tbl">
+            <tr>
+                <th>EmployeeCode</th>
+                <th>EmployeeName</th>
+                <th>Age</th>
+            </tr>
+            @foreach(Employee e in Model.Employees)
+            {
+                <tr>
+                    <td>@e.EmployeeName</td>
+                    <td>@e.EmployeeCode</td>
+                    <td>@e.Age</td>
+                </tr>
+            }
+        </table>
+        <div id="DivDataEntry"></div>
+    </div>
+</body>
+</html>

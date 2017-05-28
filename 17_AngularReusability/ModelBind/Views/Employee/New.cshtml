@@ -1,0 +1,118 @@
+﻿@model ModelBind.Models.EmployeeVM
+@using ModelBind.Models
+
+@{
+    ViewBag.Title = "NewEmployee";
+}
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=500 height=500" />
+    <title>New Employee Feed</title>
+</head>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/EmployeeSal.js"></script>
+<script language="javascript">
+
+    
+
+    var app = angular.module("myApp", []);
+
+    app.controller('EmployeeViewModel', EmployeeViewModel);
+
+    
+
+</script>
+
+
+<h2>Registration</h2>
+<body ng-app="myApp">
+    <div>
+        <div ng-controller="EmployeeViewModel">
+            <form id="frm">
+                <i>Employee Code</i> <input id="EmpCode" ng-model="EmpObj.EmployeeCode" value="EmpObj.EmployeeCode" type="text" name="EmpObj.EmployeeCode" /> <br />
+                @Html.ValidationMessageFor(x => x.EmpObj.EmployeeCode)
+                <i>Employee Name</i><input id="EmpName" ng-model="EmpObj.EmployeeName" type="text" name="EmpObj.EmployeeName" /> <br />
+                @Html.ValidationMessageFor(x => x.EmpObj.EmployeeName)
+                <i>Employee Salary</i><input id="EmpSal" type="text" ng-model="EmpObj.EmployeeSalary"
+                                             style="background-color:{{EmpObj.EmployeeSalaryColor}}" name="EmpObj.EmployeeSalary" /> <br /> <br />
+
+            </form>
+            <input id="Submit" type="button" value="Add Employee" ng-click="Add()" /> <br />
+            <table id="tbl">
+                <tr>
+                    <td>Employee Code</td>
+                    <td>Employee Name</td>
+                    <td>Employee Salary</td>
+                </tr>
+                <tr ng-repeat="emp in Employees">
+                    <td>{{emp.EmployeeCode}}</td>
+                    <td>{{emp.EmployeeName}}</td>
+                    @*<td>{{emp.EmployeeSalaryColor}}</td>*@
+                    <td style="background-color:{{emp.EmployeeSalaryColor}}">{{emp.EmployeeSalary}}</td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+        @Html.ValidationSummary()
+        
+        <br />
+        @*<table>
+            <tr>
+                <td>Employee Code</td>
+                <td>Employee Name</td>
+            </tr>
+
+            @foreach(Employee e in Model.Employees)
+            {
+                <tr>
+                    <td>@e.EmployeeCode</td>
+                    <td>@e.EmployeeName</td>
+                </tr>
+            }
+        </table>*@
+
+        @*@Html.Partial("Display",Model)*@
+
+        
+        @*<script language="Javascript">
+            $("#status").text("Loading...");
+            $.get("GetEmployees", null, BindData);
+
+            function BindData(Employees)
+            {
+                var tbl = $("#tbl");
+                $("#tbl tr").remove();
+                
+                for (var j = 0; j < Employees.length; j++)
+                {
+                    var newRow = "<tr>" +
+                        "<td>" + Employees[j].EmployeeCode + "</td>" +
+                        "<td>" + Employees[j].EmployeeName + "</td>" +
+                        "<td>" + Employees[j].EmployeeSalary + "</td>" +
+                        "</tr>";
+
+                    tbl.append(newRow);
+                    
+
+                }
+            }
+
+            function SendData()
+            {
+                var frmRef = $("#frm").serialize();
+                $.post("Submit", frmRef, BindData);
+            }
+            
+        </script>*@
+    </div>
+</body>
+</html>
+
+
+

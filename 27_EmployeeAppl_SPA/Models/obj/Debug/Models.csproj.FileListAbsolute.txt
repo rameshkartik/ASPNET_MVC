@@ -1,0 +1,13 @@
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\EmployeeAppl\Models\bin\Debug\Models.dll
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\EmployeeAppl\Models\bin\Debug\Models.pdb
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\EmployeeAppl\Models\obj\Debug\Models.dll
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\EmployeeAppl\Models\obj\Debug\Models.pdb
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\EmployeeAppl\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\EmployeeAppl_SPA\Models\bin\Debug\Models.dll
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\EmployeeAppl_SPA\Models\bin\Debug\Models.pdb
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\EmployeeAppl_SPA\Models\obj\Debug\Models.dll
+G:\RameshKartik\Tech\C# Samples\ASP.NET MVC\EmployeeAppl_SPA\Models\obj\Debug\Models.pdb
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\27_EmployeeAppl_SPA\Models\bin\Debug\Models.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\27_EmployeeAppl_SPA\Models\bin\Debug\Models.pdb
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\27_EmployeeAppl_SPA\Models\obj\Debug\Models.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\27_EmployeeAppl_SPA\Models\obj\Debug\Models.pdb

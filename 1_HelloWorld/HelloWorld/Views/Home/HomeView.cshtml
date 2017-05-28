@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=400 Height=400" />
+    <title>My Home Page </title>
+</head>
+<body>
+    <div>
+        Home Page Number 0
+        <form id="frm" action="Submit" method="post">
+            @ViewData["DateTime"]
+            @ViewBag.DateTimeViwBag
+            @TempData["TempDataa"]
+            @Session["SessData"]
+            Employee Code <input name="txtEmployeeCode" id="text1" type="text" />
+            Employee Name <input name="txtEmployeeName" id="text2" type="text" />
+
+            <input id="submit" name="btn" value="submit" type="submit" />
+        </form>
+    </div>
+</body>
+</html>
+<h2>Welcome to my Page View</h2>
+

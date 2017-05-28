@@ -1,0 +1,30 @@
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\MVC Work Project.dll.config
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\MVC Work Project.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\MVC Work Project.pdb
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\Antlr3.Runtime.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\EntityFramework.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\EntityFramework.SqlServer.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\Microsoft.Web.Infrastructure.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\Newtonsoft.Json.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.Helpers.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.Mvc.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.Optimization.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.Razor.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.WebPages.Deployment.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.WebPages.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.WebPages.Razor.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\WebGrease.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\EntityFramework.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\EntityFramework.SqlServer.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.Helpers.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.Mvc.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.Optimization.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.Razor.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.WebPages.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.WebPages.Deployment.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\System.Web.WebPages.Razor.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\Newtonsoft.Json.xml
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\bin\Antlr3.Runtime.pdb
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\obj\Debug\MVC Work Project.dll
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\obj\Debug\MVC Work Project.pdb
+G:\RameshKartik\Tech\GIT Base\ASPNET MVC\MVC Work Project\MVC Work Project\obj\Debug\MVC Work Project.csprojResolveAssemblyReference.cache

@@ -1,0 +1,30 @@
+﻿@model ModelBind.Models.EmployeeVM
+           @using ModelBind.Models
+
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+
+@*<table>
+    <tr>
+        <td>Employee Code</td>
+        <td>Employee Name</td>
+    </tr>
+
+    @foreach (Employee e in Model.Employees)
+    {
+        <tr>
+            <td>@e.EmployeeCode</td>
+            <td>@e.EmployeeName</td>
+        </tr>
+    }
+</table>*@
+
+@{
+    WebGrid wg = new WebGrid(Model.Employees);
+}
+@wg.GetHtml();
+

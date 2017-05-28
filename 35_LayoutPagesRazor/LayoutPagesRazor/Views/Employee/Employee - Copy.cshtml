@@ -1,0 +1,30 @@
+﻿@using LayoutPagesRazor.ViewModel
+@model EmployeeVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee</title>
+</head>
+<body>
+    <h1>Welcome to WebSite</h1>
+    <hr />
+    <div style="text-decoration:underline">
+    Option:Employee 
+    </div><br />
+    <div id="Divmenus" style="background-color:silver;border:1px solid black;padding:6px"> 
+        <a href="/Employee/Index">Employee</a>
+        <a href="/Customer/Index">Customer</a>
+    </div><br />
+    <div>
+        Employee Code :-@Model.EmpObj.EmployeeCode
+        Employee Name :-@Model.EmpObj.EmployeeName
+        Employee Salary :-@Model.EmpObj.EmployeeSalary
+    </div>
+</body>
+</html>

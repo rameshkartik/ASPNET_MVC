@@ -1,0 +1,102 @@
+﻿@model ModelBind.Models.EmployeeVM
+@using ModelBind.Models
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/EmployeeSal.js"></script>
+<script language="javascript">
+
+    var app = angular.module("myApp", []);
+
+    app.controller('EmployeeViewModel', EmployeeViewModel);
+
+</script>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search Employee</title>
+</head>
+<body ng-app="myApp">
+    <div>
+        <div ng-controller="EmployeeViewModel">
+            <i>EmployeeName</i>  <input id="SearchText" ng-model="EmpObj.EmployeeCode" value="EmpObj.EmployeeName" type="text"  name="EmpObj.EmployeeName" />  <br />
+            <input name="Search" id="Searchbtn" type="button" value="Search Employee" ng-click="LoadByName()" />
+
+
+            <table id="tbl">
+                <tr>
+                    <td>Employee Code</td>
+                    <td>Employee Name</td>
+                    <td>Employee Salary</td>
+                </tr>
+                <tr ng-repeat="emp in Employees">
+                    <td>{{emp.EmployeeCode}}</td>
+                    <td>{{emp.EmployeeName}}</td>
+                    @*<td>{{emp.EmployeeSalaryColor}}</td>*@
+                    <td style="background-color:{{emp.EmployeeSalaryColor}}">{{emp.EmployeeSalary}}</td>
+
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>
+     @*<script language="Javascript">
+         //$.get("GetSearchResult", null, BindData);
+
+         
+         function BindData(Employees) {
+             var tbl = $("#tbl");
+             $("#tbl tr").remove();
+
+             for (var j = 0; j < Employees.length; j++) {
+                 var newRow = "<tr>" +
+                     "<td>" + Employees[j].EmployeeCode + "</td>" +
+                     "<td>" + Employees[j].EmployeeName + "</td>" +
+                     "</tr>";
+
+                 tbl.append(newRow);
+
+
+             }
+         }
+
+
+         function SearchClick() {
+             var frmRef = $("#frmSearch").serialize();
+             $.post("SearchEmployee", frmRef, BindData);
+         }
+
+
+     </script>*@   
+
+
+    
+
+ @*<table>
+     <tr>
+         <td>EmployeeCode</td>
+         <td>EmployeeName </td>
+     </tr>
+
+         @foreach (Employee em in Model.Employees)
+         {
+             <tr>
+                 <td>@em.EmployeeCode</td>
+                 <td>@em.EmployeeName</td>
+             </tr>
+             
+                 
+         }
+ </table>*@
+
+@*@Html.Partial("Display", Model)*@
+

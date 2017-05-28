@@ -1,0 +1,43 @@
+﻿@model ModelBind.Models.EmployeeVM
+@using ModelBind.Models
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+<html>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>
+
+    @using (Html.BeginForm("SearchEmployee","Employee"))
+    {
+
+       <i>EmployeeName</i> @Html.TextBoxFor(x => x.EmpObj.EmployeeName) <br />
+       <input name="Search" id="Text1" type="submit" value="SearchEmployee" />
+    }
+
+ @*<table>
+     <tr>
+         <td>EmployeeCode</td>
+         <td>EmployeeName </td>
+     </tr>
+
+         @foreach (Employee em in Model.Employees)
+         {
+             <tr>
+                 <td>@em.EmployeeCode</td>
+                 <td>@em.EmployeeName</td>
+             </tr>
+             
+                 
+         }
+ </table>*@
+
+@Html.Partial("Display", Model)
+

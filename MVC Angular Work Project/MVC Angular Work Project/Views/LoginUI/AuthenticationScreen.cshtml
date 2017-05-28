@@ -1,0 +1,72 @@
+﻿@using MVC_Project_1.Models;
+@model MVC_Project_1.Models.LoginCredential
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/angular.js"></script>
+
+<script language="Javascript">
+
+    function LoginCredential($scope,$http)
+    {
+        $scope.CredentialObj = {
+            UserName:"Rameshkartik",
+            Passwrd:"Ram"
+        };
+
+//        $scope.AuthenticateMe = function()
+//        {
+//            debugger;
+//            //alert("Login");
+//            $http({ method: "POST", data: $scope.CredentialObj, url: "SubmitCredentials" }).then(function SuccessCallback(response) {
+////                alert("Success");
+
+//            }, function FailureCallBack(response) {
+//                //alert("Failed");
+//            });
+//        }
+
+
+        //$scope.AuthenticateMe = function () {
+
+        //    alert("Auth");
+        //    $http({ method: "POST", data: $scope.CredentialObj, url: "SubmitCredentials" }).success(data, status, headers, config);
+        //}
+
+
+    }
+
+    var myApp = angular.module("myApp", []);
+    myApp.controller("LoginCredential", LoginCredential);
+</script>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="LoginCredential"  >
+        <form id="frm" style="background-color:AppWorkspace" action="SubmitCredentials" method="post">
+            UserName :- <input id="uName" name="UserName" type="text" ng-model="CredentialObj.UserName" /> <br /> <br />
+            Password :- <input id="pwd" name="Passwrd" type="text" ng-model="CredentialObj.Passwrd" /><br /> <br />
+            <input id="submit" name="btn" value="Login" type="submit" />
+        </form>
+        @*<input id="btn" name="btnInp" value="SubmitOld" ng-click="AuthenticateMe()" type="button" /> <br />*@
+        
+    </div>
+
+    @*<form id="frm" action="SubmitCredentials" method="post">
+        Employee Code <input name="txtEmployeeCode" id="text1" type="text" />
+        Employee Name <input name="txtEmployeeName" id="text2" type="text" />
+
+        <input id="submit" name="btn" value="submit" type="submit" />
+    </form>*@
+</body>
+</html>

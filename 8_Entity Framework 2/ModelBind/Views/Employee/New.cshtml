@@ -1,0 +1,54 @@
+﻿@model ModelBind.Models.EmployeeVM
+@using ModelBind.Models
+
+@{
+    ViewBag.Title = "NewEmployee";
+}
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=500 height=500" />
+    <title>New Employee Feed</title>
+</head>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+<h2>Registration</h2>
+<body>
+    <div>
+        @using (Html.BeginForm("Submit","Employee",FormMethod.Post))
+        {
+            <i>Employee Code</i> @Html.TextBoxFor(x => x.EmpObj.EmployeeCode) <br /> <br />
+            @Html.ValidationMessageFor(x => x.EmpObj.EmployeeCode)
+            <i>Employee Name</i> @Html.TextBoxFor(x => x.EmpObj.EmployeeName) <br /> <br />
+            @Html.ValidationMessageFor(x => x.EmpObj.EmployeeName)
+            <input id="Submit" type="submit" value="submit" />
+        }
+        @Html.ValidationSummary()
+        
+        <br />
+        @*<table>
+            <tr>
+                <td>Employee Code</td>
+                <td>Employee Name</td>
+            </tr>
+
+            @foreach(Employee e in Model.Employees)
+            {
+                <tr>
+                    <td>@e.EmployeeCode</td>
+                    <td>@e.EmployeeName</td>
+                </tr>
+            }
+        </table>*@
+
+        @Html.Partial("Display",Model)
+    </div>
+</body>
+</html>
+
+
+

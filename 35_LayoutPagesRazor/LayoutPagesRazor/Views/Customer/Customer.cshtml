@@ -1,0 +1,22 @@
+﻿@using LayoutPagesRazor.ViewModel
+@model CustomerVM
+@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+@section BodySection
+{
+<div>
+     Customer Name :-@Model.CusObj.CustomerName
+     Customer Address :-@Model.CusObj.CustomerAddress
+</div>
+}
+
+@section OptionName{
+    <b>Customer</b>
+}
+
+@section HeaderSection{
+    <b>Customer Application</b>
+}
+
+

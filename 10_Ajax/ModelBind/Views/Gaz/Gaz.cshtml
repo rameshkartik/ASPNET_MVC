@@ -1,0 +1,82 @@
+﻿@using MVC_Project_1.Models;
+@model MVC_Project_1.Models.GazRequest
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<script language="Javascript">
+
+
+
+    function Add() {
+        debugger;
+        //GetData();
+        var frmVar = $("#frm").serialize();
+        $.post("Submit", frmVar, RecvData);
+
+
+    }
+
+    //function GetData()
+    //{
+    //    alert("GetReq");
+    //    $.get("GetReq", null, RecvData);
+    //}
+
+    
+    function RecvData(Requests) {
+        alert("hi");
+        var TblRef = $("#tbl");
+        $("#tbl tr").remove();
+
+        for (var i = 0; i < Requests.length; i++) {
+            var newrow = "<tr>" +
+                "<td>" + Requests[i].RequestNo + "<td>" +
+            "<td>" + Requests[i].OldName + "<td>" +
+            "<td>" + Requests[i].NewName + "<td>" +
+            "<td>" + Requests[i].DOB + "<td>" +
+            "<td>" + Requests[i].City + "<td>" +
+            "</tr>";
+            TblRef.append(newrow);
+        }
+    }
+</script>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customer</title>
+</head>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+<body>
+    <div>
+        <b><u>Welcome to Gazette Office</u></b> <br /> <br />
+    </div>
+    <div>
+        <form id="frm" style="background-color:aqua">
+            <br /><br />
+            NameChange Request No  :- @Html.TextBoxFor(x => x.RequestNo)<br /><br />
+            Old Name               :- @Html.TextBoxFor(x => x.OldName)<br /><br />
+            New Name               :- @Html.TextBoxFor(x => x.NewName)<br /><br />
+            Date Of Birth          :- @Html.TextBoxFor(x => x.DOB)<br /><br />
+            City                   :- @Html.TextBoxFor(x => x.City)<br /><br />
+            <input id="btn" name="SubmitBtn" value="Submit Request" type="button" onclick="Add()" /> <br /> <br />
+        </form>
+    </div>
+    <table id="tbl">
+        <tr>
+            <td>RequestNo</td>
+            <td>OldName</td>
+            <td>NewName</td>
+            <td>DOB</td>
+            <td>City</td>
+        </tr>
+    </table>
+</body>
+</html>
